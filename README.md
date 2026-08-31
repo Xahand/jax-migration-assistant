@@ -1,6 +1,6 @@
 # JAX Migration Assistant
 
-A small research-group guide and Codex skill for migrating existing numerical
+A small research-group guide and agent skill for migrating existing numerical
 and machine-learning Python code to idiomatic JAX.
 
 This project is for researchers who already know Python, NumPy, PyTorch, or ML
@@ -30,8 +30,10 @@ boundaries, not as a replacement for every Python library in a research codebase
 
 - `docs/migration-guide.md`: human-readable migration workflow.
 - `docs/verification.md`: equivalence testing and benchmarking guidance.
+- `docs/claude-usage.md`: Claude Code and Claude.ai usage notes.
 - `examples/minimal-equivalence/`: a tiny original-versus-JAX example.
 - `.agents/skills/jax-migration-assistant/`: repository-local Codex skill.
+- `.claude/skills/jax-migration-assistant/`: repository-local Claude skill.
 
 ## Local Checks
 
@@ -71,6 +73,15 @@ Use $jax-migration-assistant to inspect this repository and migrate only the
 numerical kernels that benefit from JAX. Preserve the original implementation
 for equivalence tests and report what you intentionally left outside JAX.
 ```
+
+For Claude Code, the same skill is available at:
+
+```text
+.claude/skills/jax-migration-assistant/
+```
+
+See `docs/claude-usage.md` for Claude Code installation and Claude.ai ZIP
+packaging notes.
 
 ## Research Context
 

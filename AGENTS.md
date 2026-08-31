@@ -1,7 +1,7 @@
 # Repository Instructions
 
-Use the repository-local skill at `.agents/skills/jax-migration-assistant/` for
-JAX migration work.
+Use the repository-local Codex skill at
+`.agents/skills/jax-migration-assistant/` for JAX migration work.
 
 Principles:
 
@@ -18,3 +18,7 @@ Principles:
 
 Keep this repository small. Put durable human guidance in `docs/`, and put
 agent-specific operational knowledge in the local skill references.
+
+The Codex skill is the canonical source. When updating it, run
+`python3 scripts/sync-claude-skill.py` to refresh the Claude project skill under
+`.claude/skills/jax-migration-assistant/`.
