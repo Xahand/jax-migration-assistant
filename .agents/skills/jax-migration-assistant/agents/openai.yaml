@@ -1,0 +1,4 @@
+interface:
+  display_name: "JAX Migration Assistant"
+  short_description: "Migrate research code to verified JAX"
+  default_prompt: "Use $jax-migration-assistant to migrate this NumPy or PyTorch code to JAX with equivalence tests."

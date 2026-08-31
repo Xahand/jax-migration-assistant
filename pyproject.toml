@@ -1,0 +1,16 @@
+[project]
+name = "jax-migration-assistant"
+version = "0.1.0"
+description = "A research-group guide and Codex skill for correctness-first migration to JAX."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+
+[project.optional-dependencies]
+examples = [
+  "jax[cpu]",
+  "pytest",
+]
+skill-dev = [
+  "pyyaml",
+]
