@@ -35,19 +35,22 @@ boundaries, not as a replacement for every Python library in a research codebase
 
 ## Local Checks
 
-The repository has no required runtime dependency. To run the example test:
+The repository has no required runtime dependency. Do not install example or
+development dependencies into the system Python. Create a repository-local
+virtual environment first:
 
 ```bash
-python -m pip install -e ".[examples]"
-python -m pytest examples/minimal-equivalence -q
+python3 -m venv .venv
+.venv/bin/python -m pip install -e ".[examples]"
+.venv/bin/python -m pytest examples/minimal-equivalence -q
 ```
 
 To run the Codex skill validator, install the optional skill-development
-dependency first:
+dependency into the same venv:
 
 ```bash
-python -m pip install -e ".[skill-dev]"
-python /path/to/quick_validate.py .agents/skills/jax-migration-assistant
+.venv/bin/python -m pip install -e ".[skill-dev]"
+.venv/bin/python /path/to/quick_validate.py .agents/skills/jax-migration-assistant
 ```
 
 ## Using The Skill
